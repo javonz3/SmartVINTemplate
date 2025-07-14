@@ -63,9 +63,8 @@ export function SignupForm() {
         <div className="mx-auto w-full max-w-md">
           <div>
             <div className="flex">
-              <div className="flex items-center">
-                <div className="h-5 w-6 bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm mr-2" />
-                <span className="font-medium text-white">SmartVIN</span>
+              <div className="text-white">
+                <Logo asLink={false} showSubtitle={true} />
               </div>
             </div>
             <h2 className="mt-8 text-2xl font-bold leading-9 tracking-tight text-white">

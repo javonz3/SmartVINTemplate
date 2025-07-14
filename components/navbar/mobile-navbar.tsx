@@ -100,8 +100,9 @@ export const MobileNavbar = ({ navItems }: any) => {
               {/* Header */}
               <div className="flex items-center justify-between w-full px-6 py-6">
                 <div className="flex items-center">
-                  <div className="h-5 w-6 bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm mr-2" />
-                  <span className="font-medium text-white text-lg">SmartVIN</span>
+                  <div className="text-white">
+                    <Logo asLink={false} variant="hero" />
+                  </div>
                 </div>
                 <div className="flex items-center">
                   <button

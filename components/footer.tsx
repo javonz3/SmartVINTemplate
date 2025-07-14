@@ -51,7 +51,7 @@ export const Footer = () => {
         <div className="max-w-7xl mx-auto text-sm text-neutral-500 dark:text-neutral-400 flex sm:flex-row flex-col justify-between items-start ">
           <div>
             <div className="mr-4  md:flex mb-4">
-              <Logo />
+              <Logo showSubtitle={true} />
             </div>
             <div>Copyright &copy; 2024 SmartVIN</div>
             <div className="mt-2">All rights reserved</div>
