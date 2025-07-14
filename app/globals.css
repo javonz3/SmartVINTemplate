@@ -1,0 +1,369 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./prism.css";
+
+/* SF Pro Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* iOS Design System Foundation */
+:root {
+  --ios-blue: #007AFF;
+  --ios-blue-light: #409CFF;
+  --ios-blue-dark: #0056CC;
+  --ios-teal: #30B0C7;
+  --ios-orange: #FF9500;
+  --ios-purple: #5856D6;
+  --ios-background-light: #F5F5F7;
+  --ios-background-dark: #000000;
+  --ios-surface-light: rgba(255, 255, 255, 0.8);
+  --ios-surface-dark: rgba(30, 30, 30, 0.8);
+  --ios-text-light: #1D1D1F;
+  --ios-text-dark: #F5F5F7;
+  --ios-text-secondary: #8E8E93;
+  --ios-border-light: rgba(255, 255, 255, 0.18);
+  --ios-border-dark: rgba(255, 255, 255, 0.12);
+  
+  --foreground-rgb: 29, 29, 31;
+  --background-start-rgb: 245, 245, 247;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 245, 245, 247;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* Base Typography */
+html {
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+  font-family: 'Inter', 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--ios-background-light);
+  color: var(--ios-text-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background-color: var(--ios-background-dark);
+  color: var(--ios-text-dark);
+}
+
+/* Glass Morphism Base Classes */
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .glass-card {
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(14, 165, 233, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.dark .glass-card:hover {
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(14, 165, 233, 0.25),
+    0 0 60px rgba(6, 182, 212, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.glass-navbar {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dark .glass-navbar {
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-button {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-button:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* iOS Button Styles */
+.ios-button-primary {
+  background: var(--ios-blue);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(0, 122, 255, 0.3);
+}
+
+.ios-button-primary:hover {
+  transform: scale(1.02);
+  background: var(--ios-blue-dark);
+  box-shadow: 0 8px 24px rgba(0, 122, 255, 0.4);
+}
+
+.ios-button-secondary {
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--ios-blue);
+  border: 1px solid rgba(0, 122, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.ios-button-secondary:hover {
+  transform: scale(1.02);
+  background: rgba(0, 122, 255, 0.1);
+  border-color: rgba(0, 122, 255, 0.3);
+}
+
+/* iOS Typography Classes */
+.ios-h1 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.ios-h2 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.ios-h3 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.ios-body {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.ios-caption {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--ios-text-secondary);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .ios-h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  .ios-h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .ios-h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+/* iOS Animation Classes */
+.ios-float {
+  animation: ios-float 6s ease-in-out infinite;
+}
+
+@keyframes ios-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.ios-pulse {
+  animation: ios-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes ios-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* iOS Card Hover Effects */
+.ios-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ios-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* iOS Gradient Backgrounds */
+.ios-gradient {
+  background: linear-gradient(135deg, var(--ios-blue) 0%, var(--ios-teal) 100%);
+}
+
+.ios-gradient-hero {
+  background: linear-gradient(135deg, var(--ios-blue) 0%, var(--ios-teal) 50%, var(--ios-purple) 100%);
+}
+
+/* Performance Optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Focus States for Accessibility */
+.focus-visible:focus {
+  outline: 2px solid var(--ios-blue);
+  outline-offset: 2px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .ios-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .ios-container {
+      padding: 0 40px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .ios-container {
+      padding: 0 60px;
+    }
+  }
+}
+
+/* iOS Blog Prose Styling */
+.prose-ios {
+  color: var(--ios-text-light);
+}
+
+.dark .prose-ios {
+  color: var(--ios-text-dark);
+}
+
+.prose-ios h1,
+.prose-ios h2,
+.prose-ios h3,
+.prose-ios h4,
+.prose-ios h5,
+.prose-ios h6 {
+  color: var(--ios-text-light);
+}
+
+.dark .prose-ios h1,
+.dark .prose-ios h2,
+.dark .prose-ios h3,
+.dark .prose-ios h4,
+.dark .prose-ios h5,
+.dark .prose-ios h6 {
+  color: var(--ios-text-dark);
+}
+
+.prose-ios p {
+  color: var(--ios-text-secondary);
+}
+
+.prose-ios a {
+  color: var(--ios-blue);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.prose-ios a:hover {
+  color: var(--ios-blue-light);
+  text-decoration: underline;
+}
+
+.prose-ios code {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 2px 6px;
+  color: var(--ios-blue);
+}
+
+.dark .prose-ios code {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.prose-ios pre {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.prose-ios blockquote {
+  border-left: 4px solid var(--ios-blue);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px 0;
+}

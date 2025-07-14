@@ -1,0 +1,71 @@
+<svg width="320" height="640" viewBox="0 0 320 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iosGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007AFF" />
+      <stop offset="50%" style="stop-color:#30B0C7" />
+      <stop offset="100%" style="stop-color:#5856D6" />
+    </linearGradient>
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.8)" />
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0.2)" />
+    </linearGradient>
+  </defs>
+  
+  <!-- iPhone Frame -->
+  <rect x="10" y="10" width="300" height="620" rx="50" ry="50" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+  
+  <!-- iPhone Screen -->
+  <rect x="20" y="20" width="280" height="600" rx="40" ry="40" fill="url(#iosGradient)"/>
+  
+  <!-- SmartVIN Background Image -->
+  <defs>
+    <clipPath id="screenClip">
+      <rect x="20" y="20" width="280" height="600" rx="40" ry="40"/>
+    </clipPath>
+  </defs>
+  <image x="20" y="20" width="280" height="600" href="./images/SmartVIN.png" clip-path="url(#screenClip)" preserveAspectRatio="xMidYMid slice"/>
+  
+  <!-- Status Bar -->
+  <rect x="30" y="40" width="260" height="30" fill="rgba(0,0,0,0.3)" rx="15"/>
+  <text x="50" y="60" font-family="SF Pro Display, system-ui, sans-serif" font-size="14" font-weight="600" fill="white">9:41</text>
+  <text x="150" y="60" font-family="SF Pro Display, system-ui, sans-serif" font-size="14" font-weight="600" fill="white" text-anchor="middle">SmartVIN</text>
+  
+  <!-- Battery -->
+  <rect x="260" y="50" width="24" height="12" rx="2" fill="none" stroke="white" stroke-width="1"/>
+  <rect x="263" y="53" width="18" height="6" rx="1" fill="white"/>
+  <rect x="284" y="55" width="2" height="2" rx="1" fill="white"/>
+  
+  <!-- App Content -->
+  <!-- Main Card -->
+  <rect x="40" y="100" width="240" height="160" rx="20" fill="url(#glassGradient)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  
+  <!-- VIN Scanner Title -->
+  <text x="160" y="130" font-family="SF Pro Display, system-ui, sans-serif" font-size="24" font-weight="700" fill="white" text-anchor="middle">VIN Scanner</text>
+  <text x="160" y="150" font-family="SF Pro Display, system-ui, sans-serif" font-size="14" font-weight="400" fill="rgba(255,255,255,0.8)" text-anchor="middle">Point camera at VIN or enter manually</text>
+  
+  <!-- Camera Preview -->
+  <rect x="60" y="170" width="200" height="70" rx="10" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <text x="160" y="210" font-family="SF Pro Display, system-ui, sans-serif" font-size="32" text-anchor="middle">📱</text>
+  
+  <!-- Feature Cards -->
+  <rect x="40" y="280" width="240" height="60" rx="15" fill="url(#glassGradient)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <circle cx="65" cy="310" r="18" fill="#FF9500"/>
+  <text x="65" y="318" font-family="SF Pro Display, system-ui, sans-serif" font-size="18" text-anchor="middle">🚗</text>
+  <text x="100" y="305" font-family="SF Pro Display, system-ui, sans-serif" font-size="16" font-weight="600" fill="white">Vehicle History</text>
+  <text x="100" y="320" font-family="SF Pro Display, system-ui, sans-serif" font-size="12" font-weight="400" fill="rgba(255,255,255,0.7)">Complete background check</text>
+  
+  <rect x="40" y="360" width="240" height="60" rx="15" fill="url(#glassGradient)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <circle cx="65" cy="390" r="18" fill="#5856D6"/>
+  <text x="65" y="398" font-family="SF Pro Display, system-ui, sans-serif" font-size="18" text-anchor="middle">💰</text>
+  <text x="100" y="385" font-family="SF Pro Display, system-ui, sans-serif" font-size="16" font-weight="600" fill="white">Market Value</text>
+  <text x="100" y="400" font-family="SF Pro Display, system-ui, sans-serif" font-size="12" font-weight="400" fill="rgba(255,255,255,0.7)">Real-time pricing data</text>
+  
+  <rect x="40" y="440" width="240" height="60" rx="15" fill="url(#glassGradient)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <circle cx="65" cy="470" r="18" fill="#30B0C7"/>
+  <text x="65" y="478" font-family="SF Pro Display, system-ui, sans-serif" font-size="18" text-anchor="middle">🤖</text>
+  <text x="100" y="465" font-family="SF Pro Display, system-ui, sans-serif" font-size="16" font-weight="600" fill="white">AI Insights</text>
+  <text x="100" y="480" font-family="SF Pro Display, system-ui, sans-serif" font-size="12" font-weight="400" fill="rgba(255,255,255,0.7)">Smart recommendations</text>
+  
+  <!-- Home Indicator -->
+  <rect x="140" y="600" width="40" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+</svg> 
