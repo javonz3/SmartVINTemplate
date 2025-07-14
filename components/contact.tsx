@@ -129,8 +129,8 @@ export function ContactForm() {
                             type="text"
                             autoComplete="name"
                             {...field}
-                            className="glass-card block w-full rounded-md border-0 py-1.5 text-white placeholder:text-white/60 focus:ring-2 focus:ring-inset focus:ring-ios-blue sm:text-sm sm:leading-6"
-                            placeholder="John Doe"
+                            className="glass-card block w-full rounded-md border-0 px-4 py-3 text-white placeholder:text-white/60 focus:ring-2 focus:ring-inset focus:ring-ios-blue sm:text-sm sm:leading-6"
+                            placeholder="Enter your full name"
                           />
                         </FormControl>
                         <FormMessage />
@@ -157,8 +157,8 @@ export function ContactForm() {
                             type="email"
                             autoComplete="email"
                             {...field}
-                            className="glass-card block w-full rounded-md border-0 py-1.5 text-white placeholder:text-white/60 focus:ring-2 focus:ring-inset focus:ring-ios-blue sm:text-sm sm:leading-6"
-                            placeholder="john@company.com"
+                            className="glass-card block w-full rounded-md border-0 px-4 py-3 text-white placeholder:text-white/60 focus:ring-2 focus:ring-inset focus:ring-ios-blue sm:text-sm sm:leading-6"
+                            placeholder="Enter your email address"
                           />
                         </FormControl>
                         <FormMessage />
@@ -185,8 +185,8 @@ export function ContactForm() {
                             type="text"
                             autoComplete="organization"
                             {...field}
-                            className="glass-card block w-full rounded-md border-0 py-1.5 text-white placeholder:text-white/60 focus:ring-2 focus:ring-inset focus:ring-ios-blue sm:text-sm sm:leading-6"
-                            placeholder="Company Inc."
+                            className="glass-card block w-full rounded-md border-0 px-4 py-3 text-white placeholder:text-white/60 focus:ring-2 focus:ring-inset focus:ring-ios-blue sm:text-sm sm:leading-6"
+                            placeholder="Enter your company name"
                           />
                         </FormControl>
                         <FormMessage />
@@ -212,8 +212,8 @@ export function ContactForm() {
                             id="message"
                             rows={4}
                             {...field}
-                            className="glass-card block w-full rounded-md border-0 py-1.5 text-white placeholder:text-white/60 focus:ring-2 focus:ring-inset focus:ring-ios-blue sm:text-sm sm:leading-6"
-                            placeholder="Hi there, I'd like to talk about..."
+                            className="glass-card block w-full rounded-md border-0 px-4 py-3 text-white placeholder:text-white/60 focus:ring-2 focus:ring-inset focus:ring-ios-blue sm:text-sm sm:leading-6"
+                            placeholder="Tell us about your project or question..."
                           />
                         </FormControl>
                         <FormMessage />

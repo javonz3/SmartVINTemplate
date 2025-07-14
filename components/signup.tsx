@@ -95,8 +95,8 @@ export function SignupForm() {
                             <input
                               id="name"
                               type="text"
-                              placeholder="Manu Arora"
-                              className="glass-card block w-full rounded-md border-0 py-1.5 text-white placeholder:text-white/60 focus:ring-2 focus:ring-inset focus:ring-ios-blue sm:text-sm sm:leading-6"
+                              placeholder="Enter your full name"
+                              className="glass-card block w-full rounded-md border-0 px-4 py-3 text-white placeholder:text-white/60 focus:ring-2 focus:ring-inset focus:ring-ios-blue sm:text-sm sm:leading-6"
                               {...field}
                             />
                           </div>
@@ -124,8 +124,8 @@ export function SignupForm() {
                             <input
                               id="email"
                               type="email"
-                              placeholder="hello@johndoe.com"
-                              className="glass-card block w-full rounded-md border-0 py-1.5 text-white placeholder:text-white/60 focus:ring-2 focus:ring-inset focus:ring-ios-blue sm:text-sm sm:leading-6"
+                              placeholder="Enter your email address"
+                              className="glass-card block w-full rounded-md border-0 px-4 py-3 text-white placeholder:text-white/60 focus:ring-2 focus:ring-inset focus:ring-ios-blue sm:text-sm sm:leading-6"
                               {...field}
                             />
                           </div>
@@ -153,8 +153,8 @@ export function SignupForm() {
                             <Password
                               id="password"
                               type="password"
-                              placeholder="••••••••"
-                              className="glass-card block w-full rounded-md border-0 py-1.5 text-white placeholder:text-white/60 focus:ring-2 focus:ring-inset focus:ring-ios-blue sm:text-sm sm:leading-6"
+                              placeholder="Enter your password"
+                              className="glass-card block w-full rounded-md border-0 px-4 py-3 text-white placeholder:text-white/60 focus:ring-2 focus:ring-inset focus:ring-ios-blue sm:text-sm sm:leading-6"
                               {...field}
                             />
                           </div>
