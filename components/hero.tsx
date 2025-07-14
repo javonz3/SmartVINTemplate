@@ -128,25 +128,122 @@ export const Hero = () => {
               <div className="absolute inset-0 bg-gray-900 rounded-[3rem] shadow-2xl">
                 <div className="absolute inset-2 bg-black rounded-[2.5rem] overflow-hidden">
                   {/* Screen content */}
-                  <div 
-                    className="h-full flex flex-col relative"
-                    style={{
-                      backgroundImage: "url('/images/SmartVIN.png')",
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                      backgroundRepeat: "no-repeat"
-                    }}
-                  >
-                    {/* Background overlay for status bar readability */}
-                    <div className="absolute inset-0 bg-black/10 rounded-[2.5rem]"></div>
+                                    <div className="h-full flex flex-col relative">
+                    {/* SmartVIN App Interface */}
+                    <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden flex items-center justify-center">
+                      <div className="w-full h-full flex items-center justify-center">
+                        <svg viewBox="15 0 250 600" className="w-full h-full" preserveAspectRatio="none" style={{filter: "brightness(0.95) contrast(1.1)"}}>
+                        <defs>
+                          <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#1C1C1E" />
+                            <stop offset="100%" stopColor="#2C2C2E" />
+                          </linearGradient>
+                          <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#2C2C2E" />
+                            <stop offset="100%" stopColor="#3A3A3C" />
+                          </linearGradient>
+                          <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#007AFF" />
+                            <stop offset="100%" stopColor="#5AC8FA" />
+                          </linearGradient>
+                        </defs>
+                        
+                        {/* Background */}
+                        <rect width="280" height="600" fill="url(#bg)" rx="0"/>
+                        
+                        {/* Status Bar */}
+                        <text x="20" y="25" fill="white" fontSize="14" fontWeight="600">9:41</text>
+                        <text x="140" y="25" fill="white" fontSize="14" fontWeight="600" textAnchor="middle">SmartVIN</text>
+                        <rect x="240" y="18" width="20" height="10" rx="2" fill="none" stroke="white" strokeWidth="1"/>
+                        <rect x="242" y="20" width="16" height="6" rx="1" fill="white"/>
+                        
+                        {/* Header Card */}
+                        <rect x="20" y="45" width="240" height="70" rx="16" fill="url(#card)"/>
+                        <text x="140" y="70" fill="white" fontSize="20" fontWeight="700" textAnchor="middle">SmartVIN</text>
+                        <text x="140" y="90" fill="#E5E5E7" fontSize="12" fontWeight="500" textAnchor="middle">AI-Powered Vehicle Valuation</text>
+                        
+                        {/* Plan Status */}
+                        <rect x="20" y="130" width="240" height="40" rx="12" fill="#2C2C2E" stroke="#48484A" strokeWidth="1"/>
+                        <circle cx="45" cy="150" r="10" fill="#FF9F00"/>
+                        <text x="45" y="155" fill="white" fontSize="12" textAnchor="middle">⚡</text>
+                        <text x="65" y="145" fill="white" fontSize="13" fontWeight="600">3/3 free lookups</text>
+                        <text x="65" y="158" fill="#8E8E93" fontSize="11">Upgrade for unlimited access</text>
+                        <rect x="210" y="138" width="30" height="24" rx="12" fill="url(#blue)"/>
+                        <text x="225" y="152" fill="white" fontSize="11" fontWeight="600" textAnchor="middle">Pro</text>
+                        
+                        {/* Vehicle Information */}
+                        <rect x="20" y="185" width="240" height="350" rx="16" fill="url(#card)"/>
+                        <text x="35" y="210" fill="white" fontSize="18" fontWeight="700">Vehicle Information</text>
+                        
+                        {/* VIN Number */}
+                        <text x="35" y="235" fill="white" fontSize="14" fontWeight="600">VIN Number</text>
+                        <rect x="35" y="245" width="180" height="32" rx="8" fill="#1C1C1E" stroke="#48484A" strokeWidth="1"/>
+                        <text x="45" y="265" fill="#8E8E93" fontSize="12">Enter 17-digit VIN</text>
+                        <rect x="225" y="245" width="32" height="32" rx="8" fill="url(#blue)"/>
+                        <text x="241" y="265" fill="white" fontSize="14" textAnchor="middle">📷</text>
+                        
+                        {/* Mileage */}
+                        <text x="35" y="300" fill="white" fontSize="14" fontWeight="600">Mileage</text>
+                        <rect x="35" y="310" width="210" height="32" rx="8" fill="#1C1C1E" stroke="#48484A" strokeWidth="1"/>
+                        <text x="45" y="330" fill="#8E8E93" fontSize="12">Enter current mileage</text>
+                        
+                        {/* Vehicle Condition */}
+                        <text x="35" y="365" fill="white" fontSize="14" fontWeight="600">Vehicle Condition</text>
+                        <rect x="35" y="375" width="50" height="24" rx="12" fill="#48484A"/>
+                        <text x="60" y="390" fill="white" fontSize="11" textAnchor="middle">Excellent</text>
+                        <rect x="95" y="375" width="35" height="24" rx="12" fill="url(#blue)"/>
+                        <text x="112.5" y="390" fill="white" fontSize="11" textAnchor="middle">Good</text>
+                        <rect x="140" y="375" width="30" height="24" rx="12" fill="#48484A"/>
+                        <text x="155" y="390" fill="white" fontSize="11" textAnchor="middle">Fair</text>
+                        <rect x="180" y="375" width="30" height="24" rx="12" fill="#48484A"/>
+                        <text x="195" y="390" fill="white" fontSize="11" textAnchor="middle">Poor</text>
+                        
+                        {/* Accident History */}
+                        <text x="35" y="425" fill="white" fontSize="14" fontWeight="600">Accident History</text>
+                        <rect x="35" y="435" width="35" height="24" rx="12" fill="url(#blue)"/>
+                        <text x="52.5" y="450" fill="white" fontSize="11" textAnchor="middle">None</text>
+                        <rect x="80" y="435" width="35" height="24" rx="12" fill="#48484A"/>
+                        <text x="97.5" y="450" fill="white" fontSize="11" textAnchor="middle">Minor</text>
+                        <rect x="125" y="435" width="50" height="24" rx="12" fill="#48484A"/>
+                        <text x="150" y="450" fill="white" fontSize="11" textAnchor="middle">Moderate</text>
+                        
+                        {/* ZIP Code */}
+                        <text x="35" y="485" fill="white" fontSize="14" fontWeight="600">ZIP Code (Optional)</text>
+                        <rect x="35" y="495" width="210" height="32" rx="8" fill="#1C1C1E" stroke="#48484A" strokeWidth="1"/>
+                        <circle cx="50" cy="511" r="6" fill="#8E8E93"/>
+                        <text x="50" y="515" fill="white" fontSize="10" textAnchor="middle">📍</text>
+                        <text x="65" y="515" fill="#8E8E93" fontSize="12">Enter ZIP for local pricing</text>
+                        
+                        {/* Bottom Navigation */}
+                        <rect x="0" y="520" width="280" height="50" fill="#1C1C1E"/>
+                        <line x1="0" y1="520" x2="280" y2="520" stroke="#48484A" strokeWidth="0.5"/>
+                        
+                        {/* VIN Lookup Active */}
+                        <circle cx="50" cy="540" r="14" fill="url(#blue)"/>
+                        <text x="50" y="545" fill="white" fontSize="12" textAnchor="middle">🔍</text>
+                        <text x="50" y="560" fill="#007AFF" fontSize="9" fontWeight="600" textAnchor="middle">VIN Lookup</text>
+                        
+                        {/* Other Nav Items */}
+                        <text x="100" y="545" fill="#8E8E93" fontSize="14" textAnchor="middle">🕐</text>
+                        <text x="100" y="560" fill="#8E8E93" fontSize="9" textAnchor="middle">History</text>
+                        
+                        <text x="150" y="545" fill="#8E8E93" fontSize="14" textAnchor="middle">📊</text>
+                        <text x="150" y="560" fill="#8E8E93" fontSize="9" textAnchor="middle">Analytics</text>
+                        
+                        <text x="200" y="545" fill="#8E8E93" fontSize="14" textAnchor="middle">☰</text>
+                        <text x="200" y="560" fill="#8E8E93" fontSize="9" textAnchor="middle">More</text>
+                        
+                        {/* Home Indicator */}
+                        <rect x="120" y="575" width="40" height="3" rx="1.5" fill="rgba(255,255,255,0.6)"/>
+                      </svg>
+                        </div>
+                    </div>
                     <div className="relative z-10 h-full flex flex-col">
                     {/* Status bar */}
                     <div className="flex justify-between items-center text-white text-sm font-medium mb-8">
-                      <span>9:41</span>
+                      <span></span>
                       <span></span>
                       <div className="flex items-center gap-1">
-                        <div className="w-4 h-2 bg-white rounded-sm"></div>
-                        <div className="w-6 h-3 border border-white rounded-sm"></div>
                       </div>
                     </div>
                     
